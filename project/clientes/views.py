@@ -1,3 +1,11 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def index(request):
+    nombre = "louis"
+    apellido = "van bethoven"
+    datos = {
+        "nombre": nombre,
+        "apellido": apellido,
+    }
+    return render(request, 'clientes/index.html', datos)
